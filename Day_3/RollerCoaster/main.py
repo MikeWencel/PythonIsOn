@@ -12,6 +12,9 @@ if height >= 120:
     elif age <= 10:
         print("Youth tickets are 7 zloty")
         bill = 7
+    elif age >= 45 and age <= 55:
+        print("Your tickets are for free!")    
+        bill = 0
     else:
         print("Adult tickets are 12 zloty")
         bill = 12
