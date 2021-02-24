@@ -1,5 +1,7 @@
 def greet(name,location):
-    print("Hello {name}!, go to {location}")
+    print(f"Hello {name}!,go to {location}")
 
 
-greet(f"Audrey","city")
+greet("Audrey","city")
+
+greet(location = "tree",name = "Snake")
