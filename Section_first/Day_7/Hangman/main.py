@@ -3,8 +3,6 @@ import hangman_words
 import hangman_draw
 import os
 
-
-
 display = []
 end_of_game = False
 #Lista słów do odgadnięcia
@@ -18,9 +16,6 @@ for x in random_word:
     
 print(display)
 
-
-
-
 while not end_of_game:
     
     guess = input("Podaj literę: ")
@@ -31,21 +26,21 @@ while not end_of_game:
             display[position] = letter          
         
     if "_" not in display:
-        print("You win")
-        print("Game Over")
+        print("Zwycięstwo")
+        print("Koniec Gry")
         end_of_game = True
 
 
             
     if guess not in random_word:
         lives -= 1
-        print(f"You've got {lives} more lives")
+        print(f"Pozostało {lives} żyć")
         if lives == 0:
-            print("You lost - Game Over!")
-            print(f"Random word: {random_word}")
+            print("Przegrana - koniec gry!")
+            print(f"Losowe słowo {random_word}")
             end_of_game = True        
         
     print(f"{' '.join(display)}")
     print(hangman_draw.stages[lives]) 
 
-#Przypadek gdy trafiona litera - wyświetlenie
+
